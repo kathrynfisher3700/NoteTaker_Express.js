@@ -1,16 +1,17 @@
 const fs = require("fs");
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-const { readFromFile, readAndAppend } = require("../helpers/fsUtils");
+const { readFromFile, readAndAppend, writeToFile } = require("../helpers/fsUtils");
 const notes = require('express').Router();
 
 //GET route for retrieving all current notes
 notes.get('/notes', (req, res) => {
     readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)));
+    getAndRenderNotes();
   });
 
 // GET Route for a specific note
-notes.get('/notes/:note_id', (req, res) => {
+notes.get('/notes/:notes_id', (req, res) => {
     const notesId = req.params.notes_id;
     readFromFile('./db/notes.json')
       .then((data) => JSON.parse(data))
