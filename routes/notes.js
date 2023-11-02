@@ -5,12 +5,12 @@ const { readFromFile, readAndAppend } = require("../helpers/fsUtils");
 const notes = require('express').Router();
 
 //GET route for retrieving all current notes
-notes.get('/', (req, res) => {
+notes.get('/notes', (req, res) => {
     readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)));
   });
 
 // GET Route for a specific note
-notes.get('/:note_id', (req, res) => {
+notes.get('/notes/:note_id', (req, res) => {
     const notesId = req.params.notes_id;
     readFromFile('./db/notes.json')
       .then((data) => JSON.parse(data))
@@ -22,8 +22,8 @@ notes.get('/:note_id', (req, res) => {
       });
   });
   
-  // POST Route for a new UX/UI tip
-notes.post('/', (req, res) => {
+  // POST 
+notes.post('/notes', (req, res) => {
     console.log(req.body);
   
     const { title, text } = req.body;
@@ -43,7 +43,7 @@ notes.post('/', (req, res) => {
   });
 
 // DELETE Route for a specific tip
-notes.delete('/:notes_id', (req, res) => {
+notes.delete('/notes/:notes_id', (req, res) => {
     const notesId = req.params.notes_id;
     readFromFile('./db/notes.json')
       .then((data) => JSON.parse(data))
