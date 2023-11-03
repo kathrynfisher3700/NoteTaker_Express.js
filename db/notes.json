@@ -1,36 +1,17 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "sdfsdf",
-        "text": "sdfsdsdf",
+        "title": "Cheerleading Game",
+        "text": "Jessica's cheer uniform needs to be washed before Saturday. 📣",
         "notes_id": "67de3b2f-d2dd-4275-8b1a-a3230af88b6f"
     },
     {
-        "title": "aer",
-        "text": "werwe",
+        "title": "Family Dinner",
+        "text": "Tuesday @ 6pm",
         "notes_id": "5acb1253-c3e7-44eb-8e95-9be1e2605375"
     },
     {
-        "title": "sfg",
-        "text": "dfgd",
+        "title": "Movie Night",
+        "text": "Go to BlockBuster for release of IT.",
         "notes_id": "ca4b3dc8-3bc1-4dd9-999d-16fdbb59da7a"
-    },
-    {
-        "title": "teype stuff",
-        "text": "stuff",
-        "notes_id": "2b84a90e-5fcf-418d-8c0d-5c6cc36ee2d7"
-    },
-    {
-        "title": "asdfsd",
-        "text": "asdfds",
-        "notes_id": "f950189e-03f9-4d96-8845-e787eb5eab7e"
-    },
-    {
-        "title": "new",
-        "text": "new",
-        "id": "730434a9-4b9a-47cc-9d84-0e428de33fb0"
     }
 ]
