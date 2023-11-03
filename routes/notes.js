@@ -5,9 +5,9 @@ const { readFromFile, readAndAppend, writeToFile } = require("../helpers/fsUtils
 const notes = require('express').Router();
 
 //GET route for retrieving all current notes
-notes.get('/notes', (req, res) => {
+notes.get('/api/notes', (req, res) => {
+  console.log('please work');
     readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)));
-    getAndRenderNotes();
   });
 
 // GET Route for a specific note
@@ -24,7 +24,7 @@ notes.get('/notes/:notes_id', (req, res) => {
   });
   
   // POST 
-notes.post('/notes', (req, res) => {
+notes.post('/api/notes', (req, res) => {
     console.log(req.body);
   
     const { title, text } = req.body;
@@ -44,8 +44,9 @@ notes.post('/notes', (req, res) => {
   });
 
 // DELETE Route for a specific tip
-notes.delete('/notes/:notes_id', (req, res) => {
-    const notesId = req.params.notes_id;
+notes.delete('/api/notes/:notes_id', (req, res) => {
+  const notesId = req.params.notes_id;
+  console.log(notesId);
     readFromFile('./db/notes.json')
       .then((data) => JSON.parse(data))
       .then((json) => {
